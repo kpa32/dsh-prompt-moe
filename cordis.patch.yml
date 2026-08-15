@@ -1,0 +1,20 @@
+# prompt-moe bundle patch（host 层）：插件挂在 preset/agent.cordis.yml 的 anchor 行。
+# 这里只管：①关官方身份句 ②bash-restore（Windows 禁用 pwsh 栈、启用 bash 栈）
+# 功能全保留；只改身份：关掉官方 harness 身份句（"You are an AI agent powered by DeepSeek Harness"），
+# persona（八词链）成为唯一身份。原行 config 只有 persona:''，需完整重述。
+- id: system-prompt
+  config:
+    persona: ''
+    includeHarnessIdentity: false
+
+- id: pwsh-sandbox
+  disabled: true
+
+- id: tool-pwsh
+  disabled: true
+
+- id: bash-sandbox
+  disabled: false
+
+- id: tool-bash
+  disabled: false

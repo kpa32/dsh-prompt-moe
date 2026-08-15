@@ -1,0 +1,8 @@
+{
+  "name": "prompt-moe",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "prompt-moe.mjs",
+  "files": ["prompt-moe.mjs", "cordis.patch.yml"],
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } }
+}
